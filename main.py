@@ -1,16 +1,20 @@
 import streamlit as st
-st.Title("My First App")
-st.write("This would be the first python-web app.")
-
-"""
-import streamlit as st
-
-st.title("")
-num1 = st.number_input("")
-num2
-
-operation - st.selection(
-	"",
-	["ADD', ""])
+st.title("Calculator")
+num1 = st.number_input("Enter number 1 : ")
+num2 = st.number_input("Enter number 2 : ")
+operation = st.selection(
+	"Enter Operator : ",
+	["+", "-", "x", "/"]
 )
-"""
+if st.button("Calculate"):
+	if operation == "+":
+		result = num1 + num2
+	elif operation == "-":
+		result = num1 - num2
+	elif operation == "x":
+		result = num1 * num2
+	elif operation == "/":
+		result = num1 / num2
+	else:
+		result = 0
+st.write(f"Result : {result}")
