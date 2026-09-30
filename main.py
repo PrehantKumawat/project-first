@@ -2,7 +2,7 @@ import streamlit as st
 st.title("Calculator")
 num1 = st.number_input("Enter number 1 : ")
 num2 = st.number_input("Enter number 2 : ")
-operation = st.selection(
+operation = st.selectbox(
 	"Enter Operator : ",
 	["+", "-", "x", "/"]
 )
