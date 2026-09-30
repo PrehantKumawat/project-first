@@ -16,4 +16,4 @@ if st.button("Calculate"):
 		result = num1 * num2
 	elif operation == "/":
 		result = num1 / num2
-st.write(f"Result : {result}")
+	st.write(f"Result : {result}")
