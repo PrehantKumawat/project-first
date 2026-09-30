@@ -4,7 +4,7 @@ num1 = st.number_input("Enter number 1 : ")
 num2 = st.number_input("Enter number 2 : ")
 operation = st.selectbox(
 	"Enter Operator : ",
-	["+", "-", "x", "/"]
+	["+", "-", "x", "/", "^"]
 )
 result = 0
 if st.button("Calculate"):
@@ -16,4 +16,6 @@ if st.button("Calculate"):
 		result = num1 * num2
 	elif operation == "/":
 		result = num1 / num2
+	elif operation == "^":
+		result = num1 ** num2
 	st.write(f"Result : {result}")
