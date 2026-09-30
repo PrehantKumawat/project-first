@@ -6,6 +6,7 @@ operation = st.selectbox(
 	"Enter Operator : ",
 	["+", "-", "x", "/"]
 )
+result = 0
 if st.button("Calculate"):
 	if operation == "+":
 		result = num1 + num2
@@ -15,6 +16,4 @@ if st.button("Calculate"):
 		result = num1 * num2
 	elif operation == "/":
 		result = num1 / num2
-	else:
-		result = 0
 st.write(f"Result : {result}")
