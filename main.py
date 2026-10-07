@@ -4,6 +4,6 @@ answer = eval(str(evaluation_string))
 st.write(
   f"""
   ### ANSWER:
-    {evaluation_string}
+    {answer}
   """
 )
