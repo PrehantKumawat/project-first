@@ -1,3 +1,4 @@
 import streamlit as st
 evaluation_string = st.text_input("Enter the expression to be evaluated : ")
-eval(evaluation_string)
+answer = eval(str(evaluation_string))
+st.write(answer)
