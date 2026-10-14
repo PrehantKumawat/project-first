@@ -23,6 +23,8 @@ elif strength_score <= 10:
     strength = "Fine"
 elif strength_score <= 15:
     strength = "Good"
-elif strength_score <= 25:
+elif strength_score >= 15:
     strength = "VeryGood"
+elif strength_score > 1000:
+    strength = "OVERKILL !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 st.write(strength, "Password!")
