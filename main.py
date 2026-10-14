@@ -1,13 +1,17 @@
 import streamlit as st
-import re
+def count_special_characters(s):
+    count = 0
+    for char in s:
+        if not char.isalnum():  # Checks if character is not a letter or number
+            count += 1
+    return count
 
 # For input st.text_input, For output st.write
 st.title("PASSWORD STRENGTH CHECKER : ")
 password = st.text_input("Enter your password : ")
-strength_score = len(password) - 5
+strength_score = len(password) - 5 + count_special_characters(password)
 
-if password.isalnum() : strength_score += 1 # Contain Number
-else : strength_score += 2                  # Contain Special Character
+if any(char.isnum()   for char in password) : strength_score += 1 # Contain numbers
 if any(char.isupper() for char in password) : strength_score += 1 # Contain Upper case letter
 if any(char.islower() for char in password) : strength_score += 1 # Contain Lower case letter
 
