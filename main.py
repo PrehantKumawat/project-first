@@ -11,7 +11,7 @@ st.title("PASSWORD STRENGTH CHECKER : ")
 password = st.text_input("Enter your password : ")
 strength_score = len(password) - 5 + count_special_characters(password)
 
-if any(char.isnum()   for char in password) : strength_score += 1 # Contain numbers
+if any(char.isdigit() for char in password) : strength_score += 1 # Contain numbers
 if any(char.isupper() for char in password) : strength_score += 1 # Contain Upper case letter
 if any(char.islower() for char in password) : strength_score += 1 # Contain Lower case letter
 
